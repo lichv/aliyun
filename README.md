@@ -1,2 +1,7 @@
-# aliyun
-阿里云 Open API SDK for php developers 封装
+### Open API SDK for php developers
+```php
+<?php
+require_once  'vendor/autoload.php';
+
+
+```
