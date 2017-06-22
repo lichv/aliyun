@@ -20,5 +20,5 @@ namespace Aliyun\Core;
  */
 interface IAcsClient
 {
-	public function doAction($requst);
+    public function doAction($requst);
 }
