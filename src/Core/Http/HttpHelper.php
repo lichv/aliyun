@@ -25,6 +25,10 @@ class HttpHelper
     
     public static function curl($url, $httpMethod = "GET", $postFields = null, $headers = null)
     {
+        define('ENABLE_HTTP_PROXY', FALSE);
+        define('HTTP_PROXY_IP', '127.0.0.1');
+        define('HTTP_PROXY_PORT', '8888');
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $httpMethod);
         if (ENABLE_HTTP_PROXY) {
