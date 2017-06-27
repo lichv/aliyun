@@ -25,13 +25,13 @@ class HttpHelper
     
     public static function curl($url, $httpMethod = "GET", $postFields = null, $headers = null)
     {
-        if(defined('ENABLE_HTTP_PROXY')){
+        if(!defined('ENABLE_HTTP_PROXY')){
             define('ENABLE_HTTP_PROXY', FALSE);
         }
-        if(defined('HTTP_PROXY_IP')){
+        if(!defined('HTTP_PROXY_IP')){
             define('HTTP_PROXY_IP', '127.0.0.1');
         }
-        if(defined('HTTP_PROXY_PORT')){
+        if(!defined('HTTP_PROXY_PORT')){
             define('HTTP_PROXY_PORT', '8888');
         }
         
